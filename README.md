@@ -101,7 +101,7 @@ $ sudo chown neo4j:neo4j -R /mnt/docker/neo4j
 ## Setup
 
 
-1. Configure the `.env` for docker-compose
+1. Edit the `example.env` and rename it to `.env` for docker-compose
 
 - set the  `SSHFS_HOST` to the ip address of your SSHFS host
 - set the  `SSHFS_RABBIT_PASSWORD` to the password you created for you rabbitmq user on the sshfs host.
