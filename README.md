@@ -70,7 +70,7 @@ Spin up any host of your choosing, and follow the procedure below
 
 ```bash
 $ sudo useradd -u 999 rabbitmq
-$ sudo useradd -u 7474 rabbitmq
+$ sudo useradd -u 7474 neo4j
 ```
 
 2. set the passwords you want for the `rabbitmq` and `neo4j` users
