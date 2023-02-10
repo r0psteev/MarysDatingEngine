@@ -5,11 +5,11 @@
 
 ## Intro
 
-**PromiscousNet** is an app that that provides you a fake network graph of  people who dated with others.
+**PromiscousNet** is an app that provides you a fake network graph of  people who dated with others.
 
 It can help **Mary** answer the question `with which other girls did her new crush Peter dated with`. With this graph analytics engine (powered by neo4j) in her hands, Mary can see if Peter has already dated other girls in her social circle, and is just trying to add her to his list too.
 
-Away from the fun, the more serious aspects of the project include learning how sensitive container data could be persisted on an external host, so that in case of general failure or if application containers need  to be momentarily stopped for further development and reloaded again, state could be preserved.
+Away from the fun, the more serious aspects of the project include learning how sensitive container data could be persisted on an external host, so that in case of general failure or if application containers need to be momentarily stopped for further development and reloaded again, state could be preserved.
 
 In summary a way to persist the state for my docker compose applications.
 
@@ -56,7 +56,7 @@ These data are:
 ## Rationale
 
 
-We avoid binding our important data to the conainer layers so that in case of general failure, we can resume operations with the last saved data.
+We avoid binding our important data to the container layers so that in case of general failure, we can resume operations with the last saved data.
 
 Both queued tasks and graph database will survive crashes on a totally
 separate host from the host on which lives the application system.
