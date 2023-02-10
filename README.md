@@ -5,7 +5,7 @@
 
 ## Intro
 
-**PromiscousNet** is an app that provides you a fake network graph of  people who dated with others.
+**PromiscuousNet** is an app that provides you a fake network graph of  people who dated with others.
 
 It can help **Mary** answer the question `with which other girls did her new crush Peter dated with`. With this graph analytics engine (powered by neo4j) in her hands, Mary can see if Peter has already dated other girls in her social circle, and is just trying to add her to his list too.
 
@@ -13,7 +13,7 @@ Away from the fun, the more serious aspects of the project include learning how 
 
 In summary a way to persist the state for my docker compose applications.
 
-At the core, **ProsmiscuosBride** is an app 
+At the core, **ProsmiscuousBride** is an app 
 
 ## Architecture.
 
@@ -21,7 +21,7 @@ At the core, **ProsmiscuosBride** is an app
 
 ### A. The seeder
 
-This components is the one responsible for generating the relationships `A -[:dated]-> B`.
+This component is the one responsible for generating the relationships `A -[:dated]-> B`.
 Out of a hard coded list of common names, it randomly maps two persons  A and B.
 
 And pushes it to the rabbitmq as task.
