@@ -17,7 +17,16 @@ At the core, **MarysDatingEngine** is an app
 
 ## Architecture.
 
-![](_docs/1.png)
+||
+---
+|![](_docs/1.png)|
+|<center>General Architecture</center>|
+
+||
+---
+|![](_docs/02.png)|
+|<center>Kubernetes deployment</center>|
+
 
 ### A. The seeder
 
