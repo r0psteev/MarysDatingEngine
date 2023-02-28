@@ -6,3 +6,4 @@ data:
   rabbitmq_host: rabbitmq-service
   rabbitmq_port: "5672"
   seeder_output_queue: DatesLinkerQueue
+  consumer_input_queue: DatesLinkerQueue

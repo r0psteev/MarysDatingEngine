@@ -17,4 +17,49 @@ spec:
       containers:
       - name: consumer
         image: arnoldedev/mary-dating-consumer
-      #TODO: Add config map to RabbitMQ, and Neo4j
+        env:
+        - name: AMQ_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-configmap
+              key: rabbitmq_host
+        - name: AMQ_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-configmap
+              key: rabbitmq_port
+        - name: AMQ_TASK_QUEUE
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-configmap
+              key: consumer_input_queue
+        - name: AMQ_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: rabbitmq-secrets
+              key: rabbitmq-default-user
+        - name: AMQ_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: rabbitmq-secrets
+              key: rabbitmq-default-password
+        - name: NEO4J_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: neo4j-secrets
+              key: neo4j-user
+        - name: NEO4J_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: neo4j-secrets
+              key: neo4j-password
+        - name: NEO4J_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: neo4j-configmap
+              key: neo4j_host
+        - name: NEO4J_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: neo4j-configmap
+              key: neo4j_port
