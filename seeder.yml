@@ -17,4 +17,29 @@ spec:
       containers:
       - name: seeder
         image: arnoldedev/mary-dating-seeder
-      #TODO: Add config map to RabbitMQ
+        env:
+        - name: AMQ_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-configmap
+              key: rabbitmq_host
+        - name: AMQ_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-configmap
+              key: rabbitmq_port
+        - name: AMQ_OUTPUT_QUEUE
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-configmap
+              key: seeder_output_queue
+        - name: AMQ_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: rabbitmq-secrets
+              key: rabbitmq-default-user
+        - name: AMQ_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: rabbitmq-secrets
+              key: rabbitmq-default-password

@@ -31,3 +31,20 @@ spec:
             secretKeyRef:
               name: rabbitmq-secrets
               key: rabbitmq-default-password
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-service
+spec:
+  selector:
+    app: rabbitmq
+  ports:
+    - protocol: TCP
+      name: rabbitmq-service-port
+      port: 5672
+      targetPort: 5672
+    - protocol: TCP
+      name: rabbitmq-mgmt-service-port
+      port: 15672
+      targetPort: 15672
