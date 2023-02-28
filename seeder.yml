@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seeder-deployment
+  labels:
+    app: seeder
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: seeder
+  template:
+    metadata:
+      labels:
+        app: seeder
+    spec:
+      containers:
+      - name: seeder
+        image: arnoldedev/mary-dating-seeder
+      #TODO: Add config map to RabbitMQ
